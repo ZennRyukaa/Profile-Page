@@ -1,0 +1,238 @@
+/* Reset Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    font-family: 'Arial', sans-serif;
+    color: #fff;
+}
+
+#background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+#background video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Main Container */
+.container {
+    padding: 20px;
+    text-align: center;
+}
+
+/* Header Section */
+.header {
+    margin-bottom: 40px; /* Tambahkan jarak antara header dan tombol */
+    text-align: center;
+}
+
+.header h1 {
+    margin-bottom: 10px; /* Jarak antara nama profil dan deskripsi */
+}
+
+.header p {
+    margin-bottom: 20px; /* Jarak antara deskripsi dan tombol */
+}
+
+/* Navigation Buttons */
+.navigation {
+    margin-bottom: 30px; /* Tambahkan jarak antara tombol Links/Shop dan konten berikutnya */
+}
+
+/* Game Profile Section */
+.content-section h2 {
+    font-size: 1.8rem;
+    margin-top: 30px; /* Tambahkan jarak sebelum bagian "Game Profile" */
+    margin-bottom: 20px; /* Jarak antara judul dan konten selanjutnya */
+}
+
+.profile-pic {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    margin-bottom: 10px;
+}
+
+/* Tab Navigation */
+.tab-switcher {
+    position: relative;
+    display: flex;
+    width: 200px;
+    background-color: #800000;
+    border-radius: 25px;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+.tab {
+    flex: 1;
+    padding: 10px;
+    text-align: center;
+    border: none;
+    background: none;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.tab.active {
+    color: #000;
+}
+
+.tab-indicator {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background-color: #fff;
+    border-radius: 25px;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Content Sections */
+.content-section {
+    display: none;
+    margin-top: 20px;
+}
+
+#links-section {
+    display: block;
+}
+
+#links-section {
+    display: block;
+}
+
+.image {
+    max-width: 80%;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+/* Social Links Section */
+.social-links {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Pusatkan tombol */
+    margin-top: 20px;
+    gap: 15px; /* Jarak antar tombol */
+}
+
+.social-links .social-button {
+    display: flex;
+    align-items: center; /* Rata vertikal antara ikon dan teks */
+    justify-content: center; /* Rata horizontal pada tombol */
+    width: 250px; /* Lebar tombol */
+    padding: 10px 20px;
+    border-radius: 25px;
+    background: rgba(255, 255, 255, 0.2); /* Warna background dengan opacity */
+    color: #fff;
+    font-size: 1rem;
+    font-weight: bold;
+    text-decoration: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Efek bayangan */
+    transition: all 0.3s ease;
+    backdrop-filter: blur(5px); /* Efek buram */
+    border: none; /* Menghapus border */
+    gap: 10px; /* Jarak antara ikon dan teks */
+}
+
+.social-links .social-button:hover {
+    transform: scale(1.05); /* Efek hover */
+    background: rgba(255, 255, 255, 0.3); /* Opacity lebih tinggi saat hover */
+}
+
+.social-links .social-button img {
+    width: 24px; /* Ukuran ikon */
+    height: 24px;
+    display: inline-block;
+}
+
+/* Shop Section */
+.shop-description {
+    font-size: 1rem;
+    color: #fff;
+    margin-top: -10px;
+    margin-bottom: 30px;
+    font-style: italic;
+}
+
+.shop-products {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.product-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 15px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    text-align: center;
+}
+
+.product-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.product-card p {
+    font-size: 1rem;
+    color: #fff;
+    font-weight: bold;
+}
+
+.product-card:hover {
+    transform: scale(1.05);
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+/* Button di pojok kanan atas */
+.donate-button {
+    position: fixed;
+    top: 20px; /* Jarak dari atas */
+    right: 20px; /* Jarak dari kanan */
+    z-index: 1000; /* Supaya berada di atas elemen lain */
+}
+
+.donate-link {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #800000; /* Warna tombol */
+    color: #fff; /* Warna teks */
+    text-decoration: none; /* Hilangkan garis bawah */
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 25px; /* Membuat tombol melengkung */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Efek bayangan */
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.donate-link:hover {
+    background-color: #800000; /* Warna tombol saat hover */
+    transform: scale(1.05); /* Efek zoom saat hover */
+}
